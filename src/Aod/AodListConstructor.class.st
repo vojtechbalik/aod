@@ -1,6 +1,6 @@
 Class {
 	#name : #AodListConstructor,
-	#superclass : #AodActor,
+	#superclass : #AodConstructor,
 	#category : #'Aod-Language-Actor'
 }
 

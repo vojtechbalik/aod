@@ -36,6 +36,14 @@ AodProgram >> constraints: anObject [
 	constraints := anObject
 ]
 
+{ #category : #'as yet unclassified' }
+AodProgram >> generateText [
+	^ String streamContents: [ :s |
+		constraints do: [ :c |
+			c printOn: s.
+			s << Character cr ] ] 
+]
+
 { #category : #comparing }
 AodProgram >> hash [
 	"Answer an integer value that is related to the identity of the receiver."
@@ -89,7 +97,7 @@ AodProgram >> strengthsDeclaration: anObject [
 
 { #category : #accessing }
 AodProgram >> text [
-	text ifNil: [ text := 'TODO: generate text' ].
+	text ifNil: [ text := self generateText ].
 	
 	^ text
 ]

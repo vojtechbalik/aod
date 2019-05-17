@@ -1,6 +1,6 @@
 Class {
 	#name : #AodSpanConstructor,
-	#superclass : #AodActor,
+	#superclass : #AodConstructor,
 	#category : #'Aod-Language-Actor'
 }
 

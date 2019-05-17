@@ -87,8 +87,7 @@ AodProgramEditor >> requestAccept [
 	cmd := AodSetProgramCommand new.
 	[ cmd program: (AodProgram fromText: editor text) ]
 		on: SmaCCParserError, AodDSLError
-		do: [ :ex | 
-			ex debug.
+		do: [ :ex |
 			self inform: ex asString.
 			^ self].
 		
