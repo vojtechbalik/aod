@@ -1,8 +1,3 @@
-"
-when I am added to a drawing, there is an attempt to resolve references
-
-I deal with Stays
-"
 Class {
 	#name : #AodProgram,
 	#superclass : #Object,

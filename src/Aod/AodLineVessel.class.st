@@ -8,12 +8,6 @@ Class {
 	#category : #'Aod-Language-Vessels'
 }
 
-{ #category : #'as yet unclassified' }
-AodLineVessel >> aboutToLayout: anElement [
-	anElement fromAnchor position: start value.
-	anElement toAnchor position: end value.
-]
-
 { #category : #adding }
 AodLineVessel >> addTo: solver [
 	solver addConstraint
@@ -54,16 +48,6 @@ AodLineVessel >> initialize [
 	
 	start value: 0@0.
 	end value: 50@50
-]
-
-{ #category : #'as yet unclassified' }
-AodLineVessel >> layoutExtent [
-	^ ((start x value max: end x value) @ (start y value max: end y value)) - self layoutPosition
-]
-
-{ #category : #accessing }
-AodLineVessel >> layoutPosition [
-	^ (start x value min: end x value) @ (start y value min: end y value)
 ]
 
 { #category : #adding }

@@ -1,6 +1,3 @@
-"
-Immutability? I can enforce it from the inside, but you can just assign a new object..
-"
 Class {
 	#name : #AodIdProperty,
 	#superclass : #AodProperty,

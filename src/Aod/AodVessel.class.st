@@ -1,6 +1,3 @@
-"
-a type serving as a representation of a visual element
-"
 Class {
 	#name : #AodVessel,
 	#superclass : #AodDataType,

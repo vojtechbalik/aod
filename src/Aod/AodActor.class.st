@@ -1,6 +1,3 @@
-"
-i could make this object itself be array, so that it is faster
-"
 Class {
 	#name : #AodActor,
 	#superclass : #AodType,

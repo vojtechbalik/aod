@@ -1,12 +1,3 @@
-"
-defines api for constraint solvers. isn't this unnecessary?
-
-for cassowary, it should 
-	- bind shapes to variables
-	- accept user constraints (provide feedback - there could be conflicts)
-	- allow editing
-	
-"
 Class {
 	#name : #AodConstraintSolver,
 	#superclass : #Object,

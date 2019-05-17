@@ -14,13 +14,6 @@ AodHandle class >> on: aModel [
 		yourself
 ]
 
-{ #category : #converting }
-AodHandle >> asElement [
-	^ self elementClass new
-		handle: self;
-		yourself
-]
-
 { #category : #'as yet unclassified' }
 AodHandle >> elementClass [
 	self subclassResponsibility

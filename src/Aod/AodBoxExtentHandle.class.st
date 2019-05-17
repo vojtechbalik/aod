@@ -4,11 +4,6 @@ Class {
 	#category : #'Aod-Language-Vessels'
 }
 
-{ #category : #accessing }
-AodBoxExtentHandle >> layoutPosition [
-	^ model extent value
-]
-
 { #category : #'as yet unclassified' }
 AodBoxExtentHandle >> suggest: aPoint in: solver [
 	solver

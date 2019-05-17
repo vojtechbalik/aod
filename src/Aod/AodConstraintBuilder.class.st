@@ -1,6 +1,3 @@
-"
-TODO: make errors domain specific, storing all the important info
-"
 Class {
 	#name : #AodConstraintBuilder,
 	#superclass : #Object,

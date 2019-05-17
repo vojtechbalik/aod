@@ -4,11 +4,6 @@ Class {
 	#category : #'Aod-Language-Vessels'
 }
 
-{ #category : #accessing }
-AodLineStartHandle >> layoutPosition [
-	^ self value - model layoutPosition
-]
-
 { #category : #'as yet unclassified' }
 AodLineStartHandle >> suggest: aPoint in: solver [
 	solver

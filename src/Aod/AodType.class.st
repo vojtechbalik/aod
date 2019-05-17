@@ -1,15 +1,3 @@
-"
-somehow I need to hold the actual anchors (or do I?)
-
-the solver can act in some way when AodAnchor instance is added (create it's own specific one)
-but then with constraints, the Types need to know the specific ones, how else would I know which is which?
-
-when  constraints are added to solver, the types that they constrain already need to be ""in"" the solver too.
-(not for cassowary, but this is a good invariant to have)
-
-so one way to do this
-	AodAnchor is the one constraints work with, no matter how. The solver knows what to do when an anchor is added. AodAnchor also owns the solver specific anchor. (Otherwise I would need some kind of mapping).
-"
 Class {
 	#name : #AodType,
 	#superclass : #Object,

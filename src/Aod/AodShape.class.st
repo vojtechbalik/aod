@@ -1,8 +1,3 @@
-"
-Shapes - from SVG's 'shape element'.
-
-constraint solver defines position/extent representation
-"
 Class {
 	#name : #AodShape,
 	#superclass : #Object,

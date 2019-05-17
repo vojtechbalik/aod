@@ -1,6 +1,3 @@
-"
-only needs to deal with atomics -- the Generateables using which everything in the language is expressed
-"
 Class {
 	#name : #AodConstraintGenerator,
 	#superclass : #Object,

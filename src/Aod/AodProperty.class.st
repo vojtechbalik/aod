@@ -1,10 +1,3 @@
-"
-I am a certain property of a part of the drawing/a tool(/a constraint?).
-
-I can by visualized as a context?
-
-Optional/Immutable properties?
-"
 Class {
 	#name : #AodProperty,
 	#superclass : #Object,

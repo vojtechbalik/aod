@@ -1,8 +1,3 @@
-"
-when strength definitions change (this change comes from a Program), the solver needs to be set up from scratch
-
-what needs to be known where about constraints and shapes in the solver?
-"
 Class {
 	#name : #AodCassowaryConstraintSolver,
 	#superclass : #AodConstraintSolver,

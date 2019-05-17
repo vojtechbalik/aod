@@ -69,16 +69,6 @@ AodBoxVessel >> initialize [
 	extent value: 50@50.
 ]
 
-{ #category : #'as yet unclassified' }
-AodBoxVessel >> layoutExtent [
-	^ extent value
-]
-
-{ #category : #accessing }
-AodBoxVessel >> layoutPosition [
-	^ position value
-]
-
 { #category : #accessing }
 AodBoxVessel >> position [
 	^ position

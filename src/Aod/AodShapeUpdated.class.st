@@ -1,5 +1,5 @@
 "
-some properties of the shape changed
+I am sent if some properties of a shape changed
 "
 Class {
 	#name : #AodShapeUpdated,
