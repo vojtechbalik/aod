@@ -13,7 +13,7 @@ AodAnchor >> anchorsDo: aBlock [
 	aBlock value: self
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #editing }
 AodAnchor >> editIn: solver [
 	solver addAnchorEdit: self
 ]

@@ -1,12 +1,9 @@
 Class {
 	#name : #AodDrawing,
 	#superclass : #Object,
-	#traits : 'TAodPropertyDictionary',
-	#classTraits : 'TAodPropertyDictionary classTrait',
 	#instVars : [
 		'shapes',
 		'announcer',
-		'propertyDict',
 		'program',
 		'constraintSolver',
 		'selection',
@@ -15,13 +12,6 @@ Class {
 	],
 	#category : #'Aod-Core'
 }
-
-{ #category : #'as yet unclassified' }
-AodDrawing >> addProperty: aProperty [
-	self propertyDictionary at: aProperty label 
-		ifPresent: [ self error: 'property already present, use #resetProperty: instead' ]
-		ifAbsentPut: [ aProperty ]
-]
 
 { #category : #shapes }
 AodDrawing >> addShape: aShape [
@@ -45,7 +35,7 @@ AodDrawing >> announce: aDrawingAnnouncement [
 	announcer announce: aDrawingAnnouncement	
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #announce }
 AodDrawing >> announceState [
 	"announce all my state"
 	self shapesDo: [ :s | announcer announce: (AodShapeAdded shape: s) ].
@@ -76,7 +66,7 @@ AodDrawing >> applyCommand: aCommand [
 	self announce: result
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #announce }
 AodDrawing >> canvasLayoutChanged [
 	"position or size of some shape has changed"
 	self announce: AodCanvasLayoutChanged new
@@ -105,7 +95,7 @@ AodDrawing >> currentEdit: anObject [
 	currentEdit := anObject
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #initialization }
 AodDrawing >> defaultConstraintSolver [
 	^ AodCassowaryConstraintSolver new
 ]
@@ -116,19 +106,11 @@ AodDrawing >> initialize [
 	
 	shapes := AodShapeManager new.
 	announcer := Announcer new.
-	propertyDict := Dictionary new.
 	program := AodProgram new.
 	selection := AodSelection new.
 	commandLog := OrderedCollection new.
 		
 	constraintSolver := self defaultConstraintSolver
-]
-
-{ #category : #'instance creation' }
-AodDrawing >> newCompiler [
-	^ AodCompiler new
-		drawing: self;
-		yourself
 ]
 
 { #category : #'program - hooks' }
@@ -171,20 +153,9 @@ AodDrawing >> program: aProgram [
 	self onProgramChanged: program
 ]
 
-{ #category : #properties }
-AodDrawing >> properties [
-	^ self propertyDictionary values
-]
-
 { #category : #accessing }
 AodDrawing >> propertyAt: aSelector ifAbsent: aBlock [
 	^ self propertyDictionary at: aSelector ifAbsent: aBlock
-]
-
-{ #category : #'private - properties' }
-AodDrawing >> propertyDictionary [
-	"return a Dictionary"
-	^ propertyDict
 ]
 
 { #category : #'as yet unclassified' }
