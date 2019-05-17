@@ -2,7 +2,7 @@ Aod is a prototype vector editor in Pharo, with support for linear constraints.
 
 
 To load this project in Pharo7, run the following script in Playground. 
-Preferably, use a fresh image to ensure things go smoothly.
+(Preferably, use a fresh image to ensure things go smoothly. Also, try to avoid the 32bit version on Linux, as in that case, Bloc has to use an alternative, not as optimized drawing backend.)
 ```
 Metacello new 
 	baseline: 'Aod';
