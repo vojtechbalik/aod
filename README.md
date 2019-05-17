@@ -10,4 +10,4 @@ Metacello new
 	load
 ```
 
-If you have any problems, open an issue or constact me at [balikvo1@fit.cvut.cz](url)
+If you have any problems, please open an issue or constact me at [balikvo1@fit.cvut.cz](url)
