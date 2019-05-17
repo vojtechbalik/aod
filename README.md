@@ -10,4 +10,13 @@ Metacello new
 	load
 ```
 
-If you have any problems, please open an issue or constact me at [balikvo1@fit.cvut.cz](url)
+If you have any problems, please open an issue or constact me at [balikvo1@fit.cvut.cz](url).
+
+For a quick test if everything loaded correctly, execute the following in Playground.
+```
+AodElement openOn: AodDrawing new
+```
+An empty editor window should be opened.
+
+
+![](empty_editor_window.png)
