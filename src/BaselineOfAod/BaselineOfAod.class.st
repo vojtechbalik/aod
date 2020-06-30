@@ -10,7 +10,7 @@ BaselineOfAod >> baseline: spec [
 	
 	spec for: #common do: [ spec
 		baseline: 'Brick' with: [ spec
-			repository: 'github://pharo-graphics/Brick/src' ];
+			repository: 'github://feenkcom/Brick/src' ];
 		
 		baseline: 'SmaCC' with: [ spec
 			repository: 'github://SmaCCRefactoring/SmaCC' ];

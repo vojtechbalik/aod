@@ -7,7 +7,7 @@ To load this project in Pharo7, run the following script in Playground.
 ```
 Metacello new 
 	baseline: 'Aod';
-	repository: 'gitlab://gitlab.fit.cvut.cz:balikvo1/aod';
+	repository: 'github://vojtechbalik/aod/src';
 	load
 ```
 
