@@ -37,7 +37,7 @@ drawing := AodDrawing new.
 
 program :=
 '
-#1.position >= point(0, 0);
+pointLeq(point(0, 0), #1.position);
 sequenced(
 	map(
 		[#1, #2, #3, #4, #5],
