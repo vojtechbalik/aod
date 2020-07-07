@@ -1,6 +1,6 @@
 # Aod
 
-Aod is a prototype vector editor in Pharo, with support for linear constraints.
+Aod is a prototype vector editor in Pharo, with support for linear constraints, based on the [Cassowary constraint solver](https://overconstrained.io/).
 
 To load this project in Pharo8, run the following script in Playground. 
 
