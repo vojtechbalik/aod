@@ -42,8 +42,9 @@ AodCanvasElementExample >> editsExample [
 	drawing constraintSolver: AodDummySolver new.
 
 	canvasElem := AodCanvasElement new.
-	canvasElem
-		look: BrLayoutLook matchParent.
+	canvasElem constraintsDo: [ :c |
+		c vertical matchParent.
+		c horizontal matchParent ].
 	
 	canvasElem drawing: drawing.
 

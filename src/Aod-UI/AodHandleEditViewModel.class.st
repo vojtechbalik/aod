@@ -45,3 +45,12 @@ AodHandleEditViewModel >> dragStartEvent: anEvent [
 	
 	self fireEvent: (AodStartEditCommand via: handle) asIssueEvent
 ]
+
+{ #category : #initialization }
+AodHandleEditViewModel >> initializeListeners [
+	super initializeListeners.
+	
+	self when: BlDragStartEvent do: [ :e | self dragStartEvent: e ].
+	self when: BlDragEvent do: [ :e | self dragEvent: e ].
+	self when: BlDragEndEvent do: [ :e | self dragEndEvent: e ]
+]

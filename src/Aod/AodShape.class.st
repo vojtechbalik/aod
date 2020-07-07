@@ -39,7 +39,7 @@ AodShape >> aodWriteOn: aStream [
 	self 
 		propertyAt: #id
 		ifPresent: [ :p |
-			aStream << $# << p value.
+			aStream << $# << p value asString.
 			^ self ].
 	
 	self error: 'shape does not have id or name, cannot write it out'

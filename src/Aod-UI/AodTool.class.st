@@ -1,6 +1,6 @@
 Class {
 	#name : #AodTool,
-	#superclass : #BlElementEventListener,
+	#superclass : #BlEventListener,
 	#traits : 'TBlEventTarget',
 	#classTraits : 'TBlEventTarget classTrait',
 	#instVars : [

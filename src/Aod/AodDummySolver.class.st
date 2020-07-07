@@ -33,7 +33,6 @@ AodDummySolver >> constraints [
 
 { #category : #editing }
 AodDummySolver >> edit: aModel [
-	self flag: 'change this wtf, probably the callbacks in the models to #editIn:'.
 	editing := true.
 	aModel editIn: self.
 	suggestions := Array new: editedAnchors size

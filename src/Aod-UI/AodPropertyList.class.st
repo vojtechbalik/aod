@@ -53,12 +53,12 @@ AodPropertyList >> initialize [
 	self column
 		title: 'Property';
 		stencil: [ :aProperty |
-			BrListLabelStencil new text: aProperty label ].
+			BrColumnCellLabelStencil new text: aProperty label ].
 		
 	self column 
 		title: 'Value';
 		stencil: [ :aProperty |
-			BrListLabelStencil new text: aProperty value asString ]
+			BrColumnCellLabelStencil new text: aProperty value asString ]
 ]
 
 { #category : #enumerating }
@@ -74,12 +74,10 @@ AodPropertyList >> onSelect: anAnnouncement [
 { #category : #'private - layout' }
 AodPropertyList >> updateFromModel [
 	drawing selection isSelecting
-		ifTrue: [ 
-			self display: drawing selection shape properties.
+		ifTrue: [ self items: drawing selection shape properties.
 			(inspectBar hasChild: shapeInspect)
-				ifFalse: [inspectBar addChild: shapeInspect ] ]
-		ifFalse: [ 
-			self display: #().
+				ifFalse: [ inspectBar addChild: shapeInspect ] ]
+		ifFalse: [ self items: #().
 			(inspectBar hasChild: shapeInspect)
 				ifTrue: [ inspectBar removeChild: shapeInspect ] ]
 ]

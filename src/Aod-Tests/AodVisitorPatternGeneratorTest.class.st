@@ -6,7 +6,7 @@ Class {
 
 { #category : #formatting }
 AodVisitorPatternGeneratorTest >> formatMethod: aString [
-	^ BISimpleFormatter format: (RBParser parseMethod: aString)
+	^ RBSimpleFormatter format: (RBParser parseMethod: aString)
 ]
 
 { #category : #accessing }

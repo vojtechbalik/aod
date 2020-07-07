@@ -3,7 +3,7 @@ Extension { #name : #AodPointHandle }
 { #category : #'*Aod-UI' }
 AodPointHandle >> asElement [
 	^ super asElement
-		look: AodPointHandleLook;
+		look: AodHandleLook + AodCircleHandleLook;
 		yourself
 ]
 

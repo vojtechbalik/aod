@@ -22,7 +22,7 @@ AodHandleElement >> handle: anObject [
 AodHandleElement >> initialize [
 	super initialize.
 	
-	self viewModel: AodHandleEditViewModel new + (BrInteractiveModel new
+	self viewModel: (BrInteractiveModel new
 			withHover;
 			withPress)
 	

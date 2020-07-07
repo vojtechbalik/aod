@@ -20,7 +20,7 @@ AodIdReference >> = anObject [
 
 { #category : #'as yet unclassified' }
 AodIdReference >> aodWriteOn: aStream [
-	aStream << $# << id
+	aStream << $# << id asString
 ]
 
 { #category : #comparing }
